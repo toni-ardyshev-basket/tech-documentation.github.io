@@ -6,9 +6,11 @@ Typography
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
+
 :root {
   --font-primary: 'Open Sans', sans-serif;
   --font-secondary: Arial, sans-serif;
+  --font-code: monospace;
 
   /* set base values */
   --text-base-size: 1em;
@@ -39,19 +41,19 @@ Typography
   --space-xxxl: 8.5em;
 
   /* typography color*/
-  --color-text: var(--gray-10);
+  --color-text: var(--tuna);
   --color-text-heading: var(--black);
   // --color-text-subtle: var(--gray-6);
-  // --color-link: var(--color-primary);
-  // --color-link-visited: var(--color-primary-dark);
+  --color-link: var(--color-link-primary);
+  --color-link-visited: var(--color-link-primary-visited);
 }
 
-@include breakpoint(md) {
-  :root {
-      --text-base-size: 1.25em;
-      --text-scale-ratio: 1.25;
-  }
-}
+// @include breakpoint(md) {
+//   :root {
+//       --text-base-size: 1.25em;
+//       --text-scale-ratio: 1.25;
+//   }
+// }
 
 body {
   font-size: var(--text-base-size);
@@ -99,7 +101,15 @@ p {
 }
 
 a {
-  color: var(--color-link);
+  color: var(--color-link-primary);
+
+  &:hover {
+    color: var(--color-link-primary);
+  }
+
+  &:active {
+    color: #000000;
+  }
 
   &:visited {
       color: var(--color-link-visited);
@@ -143,6 +153,10 @@ ol {
   u {
       text-decoration: underline;
   }
+}
+
+code {
+  font-family: var(--font-code);
 }
 
 /* utility classes */

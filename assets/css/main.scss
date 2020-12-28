@@ -15,12 +15,12 @@
 @import "../css/helpers/variables";
 
 // LAYOUT
-@import "../css/layout/navigation";
+@import "../css/layout/_navigation";
 @import "../css/layout/content";
 @import "../css/layout/footer";
 
 // PAGES
-@import "../css/pages/home.scss";
+@import "../css/pages/home";
 
 // VENDORS
 

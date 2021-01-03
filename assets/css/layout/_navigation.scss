@@ -6,6 +6,7 @@
   height: auto;
   min-width: 29em;
   overflow: hidden;
+  background-color: inherit;
 
   @include border-solid-direction(right, 2px, $border-menu-color);
   

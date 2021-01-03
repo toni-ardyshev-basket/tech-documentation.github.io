@@ -1,0 +1,21 @@
+/*
+  MIXINS
+*/
+
+// border
+@mixin border-solid($width, $color) {
+  border: $width solid $color;
+}
+
+ @mixin border-solid-direction($direction, $width, $color) {
+   border-#{$direction}: $width solid $color;
+ }
+
+// transition
+ @mixin transition($prop, $values...) {
+  -moz-#{$prop}: $values;
+  -ms-#{$prop}: $values;
+  -o-#{$prop}: $values;
+  -webkit-#{$prop}: $values;
+  $prop: $values;
+} 

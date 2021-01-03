@@ -18,7 +18,8 @@
  * Remove the margin in all browsers.
  */
 
-body {
+* {
+  padding: 0;
   margin: 0;
 }
 
@@ -66,6 +67,11 @@ pre {
 
 /* Text-level semantics
    ========================================================================== */
+
+
+   ul, ol {
+    list-style-type: none;
+  }   
 
 /**
  * Remove the gray background on active links in IE 10.

@@ -1,0 +1,102 @@
+#main-doc {
+  position: absolute;
+  margin-left: 31em;
+  padding: 2em;
+  background-color: $backgorund-color-base;
+  color: $tuna;
+
+
+  @include _979 {
+    width: auto;
+    padding: 0 3em;
+    margin: 0 auto;
+    z-index: 1;
+    top: 8em;
+  }
+
+
+  @include _480 {
+    width: auto;
+    padding: 0 1em;
+    margin: 0 auto;
+    z-index: 1;
+    top: 8em;
+  }
+
+  .main-section{
+    line-height: 1.5em;
+
+    header {
+      color: $black;
+      font-size: var(--text-xxl);
+    }
+  
+    article {
+      padding: 1em;
+  
+      @include _979 {
+        padding: 1em 2em;
+      }
+
+      @include _480 {
+        padding: 1em 0;
+      }
+
+      p {
+        margin: 1em 0;
+      }
+  
+      ul {
+        padding-left: 3em;
+        font-size: var(--text-lg);
+        list-style-type: disc;
+        line-height: 1.5em;
+  
+        li {
+          margin: 1em;
+  
+          ul {
+            list-style-type: circle;
+            font-size: var(--text-sm);
+
+            @include _979 {
+              padding-left:  1em;
+            }
+          }
+
+        }
+
+        @include _979 {
+          padding-left:  1em;
+        }
+      }
+  
+      code {
+        display: block;
+        width: 100%;
+        position: relative;
+        padding: 1.5em;
+        margin: 1em;
+        background-color: #c6c6c6;
+        font-size: var(--text-md);
+        font-family: var(--font-code);
+        white-space: pre-line;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 2;
+        border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+        -ms-border-radius: 0.5em;
+        -o-border-radius: 0.5em;
+
+        @include _979 {
+          width: 80%;
+          padding: 1em;
+          margin: 2em 1em;
+        }
+      }
+    }
+  }
+}
+

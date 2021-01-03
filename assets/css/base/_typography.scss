@@ -13,8 +13,9 @@ Typography
   --font-code: monospace;
 
   /* set base values */
-  --text-base-size: 1em;
+  --text-base-size: 10px;
   --text-scale-ratio: 1.2;
+  --text-base-weight: lighter;
 
   /* type scale */
   --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
@@ -27,7 +28,7 @@ Typography
 
   /* line-height */
   --heading-line-height: 1.2;
-  --body-line-height: 1.4;
+  --body-line-height: 1.5;
 
   /* spacing values */
   --space-xxxs: 0.25em;
@@ -48,20 +49,16 @@ Typography
   --color-link-visited: var(--color-link-primary-visited);
 }
 
-// @include breakpoint(md) {
-//   :root {
-//       --text-base-size: 1.25em;
-//       --text-scale-ratio: 1.25;
-//   }
-// }
-
 body {
   font-size: var(--text-base-size);
   font-family: var(--font-primary);
   color: var(--color-text);
+  font-weight: var(--text-base-weight);
+  background-color: #ffffff;
 }
 
 h1, h2, h3, h4, form legend {
+  font-weight: lighter;
   color: var(--color-text-heading);
   margin-bottom: var(--space-xxs);
   line-height: var(--heading-line-height);
@@ -98,9 +95,12 @@ h4, .text--md {
 
 p {
   line-height: var(--body-line-height);
+  font-size: var(--text-lg);
 }
 
 a {
+  cursor: pointer;
+  text-decoration: none;
   color: var(--color-link-primary);
 
   &:hover {
@@ -130,20 +130,23 @@ b, strong {
   }
 
   ul, ol {
-  list-style-position: outside;
-      padding-left: 24px;
-}
-
-ul {
-  list-style-type: disc;
-}
-
-ol {
-  list-style-type: decimal;
+    list-style-position: outside;
+    padding-left: 24px;
   }
 
+  ul {
+    list-style-type: disc;
+    line-height: var(--body-line-height);
+    
+  }
+
+  ol {
+    line-height: var(--body-line-height);
+    list-style-type: circle;
+    }
+
   ul li, ol li {
-      line-height: var(--body-line-height);
+    line-height: var(--body-line-height);
   }
   
   em {
@@ -157,12 +160,4 @@ ol {
 
 code {
   font-family: var(--font-code);
-}
-
-/* utility classes */
-.truncate {
-  // truncate text if it exceeds parent
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }

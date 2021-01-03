@@ -6,7 +6,6 @@
   height: auto;
   min-width: 29em;
   overflow: hidden;
-  background-color: inherit;
 
   @include border-solid-direction(right, 2px, $border-menu-color);
   
@@ -23,6 +22,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 3em;
+  background-color: $backgorund-color-base;
 
   @include border-solid-direction(bottom, 1px, $border-menu-color);
 
@@ -40,6 +40,7 @@
   height: 100vh;
   flex-direction: column;
   justify-content: flex-start;
+  background-color: $backgorund-color-base;
 
   .nav__item  {
     min-height: 4em;

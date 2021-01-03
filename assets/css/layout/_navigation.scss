@@ -22,7 +22,6 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 3em;
-  background-color: $backgorund-color-base;
 
   @include border-solid-direction(bottom, 1px, $border-menu-color);
 
@@ -69,7 +68,6 @@
       &.open-menu {
         opacity: 1;
         visibility: visible;
-        background-color: $backgorund-color-base;
       }
     }
   }

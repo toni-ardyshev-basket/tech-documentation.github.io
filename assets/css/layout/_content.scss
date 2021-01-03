@@ -1,10 +1,13 @@
+body {
+  background-color: $backgorund-color-base;
+}
+
 #main-doc {
   position: absolute;
+  width: auto;
   margin-left: 31em;
   padding: 2em;
-  background-color: $backgorund-color-base;
   color: $tuna;
-
 
   @include _979 {
     width: auto;
@@ -73,7 +76,7 @@
   
       code {
         display: block;
-        width: 100%;
+        width: auto;
         position: relative;
         padding: 1.5em;
         margin: 1em;

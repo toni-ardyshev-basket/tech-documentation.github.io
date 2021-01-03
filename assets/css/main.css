@@ -392,7 +392,6 @@ body {
   font-family: var(--font-primary);
   color: var(--color-text);
   font-weight: var(--text-base-weight);
-  background-color: #ffffff;
 }
 
 h1, h2, h3, h4, form legend {
@@ -539,7 +538,6 @@ Variables
       -ms-flex-align: center;
           align-items: center;
   padding-left: 3em;
-  background-color: #f7f7f7;
   border-bottom: 1px solid #99a2a2;
 }
 
@@ -609,7 +607,6 @@ Variables
   .nav__list.open-menu {
     opacity: 1;
     visibility: visible;
-    background-color: #f7f7f7;
   }
 }
 
@@ -687,11 +684,15 @@ Variables
   }
 }
 
+body {
+  background-color: #f7f7f7;
+}
+
 #main-doc {
   position: absolute;
+  width: auto;
   margin-left: 31em;
   padding: 2em;
-  background-color: #f7f7f7;
   color: #4d4e53;
 }
 
@@ -774,7 +775,7 @@ Variables
 
 #main-doc .main-section article code {
   display: block;
-  width: 100%;
+  width: auto;
   position: relative;
   padding: 1.5em;
   margin: 1em;
